@@ -1,0 +1,27 @@
+Hibernate takes data in form of objects and stores in database.
+It writes the sql query itself and developer does not have to do these work.
+The configuration is done via hibernate config file.
+Easiest way is to config via XML file. It consist of all the data.
+The standard name of hibernate config file is hibernate.cfg.xml
+Properties are dependent on the type of the database used in Applications.
+Database table is similar to a class in Java. we have to match class with table.
+Class is Entity and its Object is saved in database table accordingly.
+We can use XML files and Annotations for the Hibernate framework. XML is not recommended.
+Basic Annotations in Hibernate - Commonly used hibernate annotations
+@Entity - use to mark class as Entity
+@Table - use to change the table details
+@Id - to mark a column as id(primary key - uniquely identify records in database)
+@GeneratedValue - it will automatically generate the value of primary key. we have to apply strategies for this.
+@Column - it is used to changed the column name and specify the mappings. If we want to modify column details.
+@Transient - it tells hibernate not to save a particular field. If we want three columns out of four properties in class.
+@Temporal - it is put over date fields and tells hibernate the format in which date needs to be saved.
+@Lob - it tells hibernate that this is a large object, not a simple object
+Advanced Annotations in Hibernate Framework.
+@OneToOne
+@OneToMany
+@ManyToOne
+@JoinColumn
+
+Fetch Data - We have to methods for this operation that is get() and load() that can be used.
+
+

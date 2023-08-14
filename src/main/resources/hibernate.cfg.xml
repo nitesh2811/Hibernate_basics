@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--For XML files we need DTD or XSD. Below is the hibernate DTD.-->
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/myhibernate</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">panasonic</property>
+<!-- Dialect-language(depends on the type of database)-->
+        <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+<!-- Below is the property for automatic creation of the table in database.Update means
+ if the table is not present then only it will be created otherwise table will not be created-->
+        <property name="hbm2ddl.auto">create</property>
+<!-- Shows query created by hibernate framework -->
+        <property name="show_sql">true</property>
+        <mapping class="org.example.model.Student"/>
+        <mapping class="org.example.model.StudentAddress"/>
+    </session-factory>
+</hibernate-configuration>
